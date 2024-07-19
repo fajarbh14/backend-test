@@ -1,0 +1,25 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "lib": ["es2016", "dom"],
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "rootDir": "./src",
+    "target": "es2016",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./src/types", "./node_modules/@types"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", ".env"]
+}
