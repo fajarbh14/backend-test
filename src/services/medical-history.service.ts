@@ -12,4 +12,8 @@ export class MedicalHistoryService extends BaseService {
   async createMedicalHistory(input: DTOMedicalHistory) {
     return this.medicalHistoryRepository.createMedicalHistory(input);
   }
+
+  async updateMedicalHistory(id: string, input: DTOMedicalHistory) {
+    await this.medicalHistoryRepository.updateMedicalHistory(id, input);
+  }
 }

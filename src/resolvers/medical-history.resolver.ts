@@ -55,6 +55,33 @@ const MedicalHistoryMutation = {
       return new ApolloError(error.message, "400");
     }
   },
+
+  async updateMedicalHistory(
+    _: any,
+    { id, input }: { id: string; input: DTOMedicalHistory },
+  ) {
+    try {
+      const { patientId, condition, diagnosisDate, status } = input;
+      await medicalHistoryService.updateMedicalHistory(id, {
+        patientId,
+        condition,
+        diagnosisDate,
+        status,
+      });
+      return "Medical history updated successfully";
+    } catch (error) {
+      return new ApolloError(error.message, "400");
+    }
+  },
+
+  async deleteMedicalHistory(_: any, { id }: { id: string }) {
+    try {
+      await medicalHistoryService.destroy(id);
+      return "Medical history deleted successfully";
+    } catch (error) {
+      return new ApolloError(error.message, "400");
+    }
+  },
 };
 
 export { MedicalHistoryQuery, MedicalHistoryMutation };

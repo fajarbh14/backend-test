@@ -8,11 +8,11 @@ export class MedicationService extends BaseService {
     super(medicationRepository);
   }
 
-  async createMedication(input: DTOMedication): Promise<void> {
-    await this.medicationRepository.createMedication(input);
+  async createMedication(input: DTOMedication) {
+    return await this.medicationRepository.createMedication(input);
   }
 
-  async updateMedication(id: string, input: DTOMedication): Promise<void> {
+  async updateMedication(id: string, input: DTOMedication) {
     await this.medicationRepository.updateMedication(id, input);
   }
 }

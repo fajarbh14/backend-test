@@ -9,7 +9,10 @@ export class AppointmentRepository {
     this.appointmentRepository = Database.getRepository(Appointment);
   }
 
-  async findAndPaginate(options: Record<string, number>) {
+  async findAndPaginate(
+    query: Record<string, string>,
+    options: Record<string, number>,
+  ) {
     const paginate = {
       skip: (options.page - 1) * options.limit,
       take: options.limit,

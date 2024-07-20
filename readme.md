@@ -81,3 +81,30 @@ docker-compose up --build
 ### Postman Documentation
 
 https://blue-meadow-214897.postman.co/workspace/Team-Workspace~5c93292e-c5dc-4c89-87a7-70c91a07f7b4/collection/6698b26e3c1203dec9913640?action=share&creator=30453312
+
+# Testing Guide
+
+This guide outlines the steps to change the value of `patientId` for each test data category: medical-history, medication, and appointment.
+
+## Instructions
+
+### 1. Medical History
+
+1. Open the `medical-history.test.ts` file located in the `test` directory.
+2. Locate the `patientId` field in each test entry.
+3. Modify the value of `patientId` to the desired value.
+4. Save the changes to `medical-history.test.ts`.
+
+### 2. Medication
+
+1. Open the `medication.test.ts` file located in the `test` directory.
+2. Locate the `patientId` field in each test entry.
+3. Modify the value of `patientId` to the desired value.
+4. Save the changes to `medication.test.ts`.
+
+### 3. Appointment
+
+1. Open the `appointment.test.ts` file located in the `test` directory.
+2. Locate the `patientId` field in each test entry.
+3. Modify the value of `patientId` to the desired value.
+4. Save the changes to `appointment.test.ts`.

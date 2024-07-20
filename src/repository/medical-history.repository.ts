@@ -53,4 +53,19 @@ export class MedicalHistoryRepository {
     }
     return medicalHistory;
   }
+
+  async updateMedicalHistory(id: string, input: any) {
+    await this.medicalHistoryRepository.update(
+      {
+        id: id,
+      },
+      input,
+    );
+  }
+
+  async delete(id: string) {
+    await this.medicalHistoryRepository.delete({
+      id: id,
+    });
+  }
 }
